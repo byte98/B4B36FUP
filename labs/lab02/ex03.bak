@@ -1,0 +1,10 @@
+
+;;;Function which reverses list in a more efficient way
+(define (reverse-list lst)                                           ;function reverse-list(list lst)
+  (define (reverse-accumulator lst item)
+    (cond
+      ((null? lst) item)
+      (else (reverse-accumulator (cdr lst) (append(list(car lst)) item)))
+      )
+   )
+)
